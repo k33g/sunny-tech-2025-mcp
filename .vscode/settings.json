@@ -1,0 +1,345 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Idea intellij light theme",
+    "editor.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "workbench.tree.indent": 20,
+    "window.zoomLevel": 0.0,
+    "[markdown]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.fontWeight": "normal",
+        "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
+        "editor.fontSize": 14,
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        }
+    },
+    "markdown.preview.fontSize": 14,
+    "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor"
+    },
+    "[dockerfile]": {
+        "editor.fontSize": 16,
+    },
+    "[dockercompose]": {
+        "editor.fontSize": 16,
+    },
+    "[json]": {
+        "editor.fontSize": 16,
+    },
+    "[yaml]": {
+        "editor.fontSize": 16,
+
+    },
+    "[go]": {
+        "editor.fontSize": 14,
+    },
+    "todohighlight.keywords": [
+        {
+            "text": "NOTE:",
+            "color": "#ffffff",
+            "backgroundColor": "#0062FF",
+            "border": "1px solid #0062FF",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "REF:",
+            "color": "#000000",
+            "backgroundColor": "#E5AADE",
+            "border": "1px solid #E5AADE",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "QUESTION:",
+            "color": "#000000",
+            "backgroundColor": "#F6FF00",
+            "border": "1px solid #F6FF00",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "DEBUG:",
+            "color": "#ffffff",
+            "backgroundColor": "#ff0000",
+            "border": "1px solid #ff0000",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "TODO:",
+            "color": "#ffffff",
+            "backgroundColor": "#149C11",
+            "border": "1px solid #149C11",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "TEST:",
+            "color": "#ffffff",
+            "backgroundColor": "#C8177B",
+            "border": "1px solid #C8177B",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "IMPORTANT:",
+            "color": "#ffffff",
+            "backgroundColor": "#EC1818",
+            "border": "1px solid #EC1818",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "INFO:",
+            "color": "#ffffff",
+            "backgroundColor": "#236DD5",
+            "border": "1px solid #236DD5",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "EXAMPLE:",
+            "color": "#ffffff",
+            "backgroundColor": "#C51ACE",
+            "border": "1px solid #C51ACE",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "WAIT:",
+            "color": "#ffffff",
+            "backgroundColor": "#9B1111",
+            "border": "1px solid #9B1111",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "BEGIN:",
+            "color": "#ffffff",
+            "backgroundColor": "#000000",
+            "border": "1px solid #000000",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "END:",
+            "color": "#ffffff",
+            "backgroundColor": "#000000",
+            "border": "1px solid #000000",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "STEP 1:",
+            "color": "#ffffff",
+            "backgroundColor": "#27A34F",
+            "border": "1px solid #27A34F",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "STEP 2:",
+            "color": "#ffffff",
+            "backgroundColor": "#2887C2",
+            "border": "1px solid #2887C2",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "STEP 3:",
+            "color": "#ffffff",
+            "backgroundColor": "#3330C4",
+            "border": "1px solid #3330C4",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "STEP 4:",
+            "color": "#ffffff",
+            "backgroundColor": "#7D30C4",
+            "border": "1px solid #7D30C4",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "STEP 5:",
+            "color": "#ffffff",
+            "backgroundColor": "#BA30C4",
+            "border": "1px solid #BA30C4",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "STEP 6:",
+            "color": "#ffffff",
+            "backgroundColor": "#B91F5F",
+            "border": "1px solid #B91F5F",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "SETTINGS:",
+            "color": "#ffffff",
+            "backgroundColor": "#2887C2",
+            "border": "1px solid #2887C2",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "DATA:",
+            "color": "#ffffff",
+            "backgroundColor": "#7D8589",
+            "border": "1px solid #7D8589",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "CONTENT:",
+            "color": "#ffffff",
+            "backgroundColor": "#0E0F0F",
+            "border": "1px solid #0E0F0F",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "TOOL:",
+            "color": "#ffffff",
+            "backgroundColor": "#D10E89",
+            "border": "1px solid #D10E89",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "TOOLS:",
+            "color": "#ffffff",
+            "backgroundColor": "#D10E89",
+            "border": "1px solid #D10E89",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "AGENT:",
+            "color": "#ffffff",
+            "backgroundColor": "#360ABC",
+            "border": "1px solid #360ABC",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "AGENTS:",
+            "color": "#ffffff",
+            "backgroundColor": "#360ABC",
+            "border": "1px solid #360ABC",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "SMALL LLM:",
+            "color": "#000000",
+            "backgroundColor": "#17D1EA",
+            "border": "1px solid #17D1EA",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "TOOLS CATALOG:",
+            "color": "#ffffff",
+            "backgroundColor": "#A70A0F",
+            "border": "1px solid #A70A0F",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "TOOL 1:",
+            "color": "#ffffff",
+            "backgroundColor": "#27A34F",
+            "border": "1px solid #27A34F",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "TOOL 2:",
+            "color": "#ffffff",
+            "backgroundColor": "#2887C2",
+            "border": "1px solid #2887C2",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "TOOL 3:",
+            "color": "#ffffff",
+            "backgroundColor": "#3330C4",
+            "border": "1px solid #3330C4",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "TOOL 4:",
+            "color": "#ffffff",
+            "backgroundColor": "#7D30C4",
+            "border": "1px solid #7D30C4",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "TOOL 5:",
+            "color": "#ffffff",
+            "backgroundColor": "#BA30C4",
+            "border": "1px solid #BA30C4",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "TOOL 6:",
+            "color": "#ffffff",
+            "backgroundColor": "#B91F5F",
+            "border": "1px solid #B91F5F",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "PROMPT:",
+            "color": "#ffffff",
+            "backgroundColor": "#B91F5F",
+            "border": "1px solid #B91F5F",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "SYSTEM MESSAGE:",
+            "color": "#ffffff",
+            "backgroundColor": "#0A6E15",
+            "border": "1px solid #0A6E15",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "USER MESSAGE:",
+            "color": "#ffffff",
+            "backgroundColor": "#EA5B03",
+            "border": "1px solid #EA5B03",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "ASSISTANT MESSAGE:",
+            "color": "#ffffff",
+            "backgroundColor": "#53077F",
+            "border": "1px solid #53077F",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+    ]
+}

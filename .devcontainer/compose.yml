@@ -1,0 +1,21 @@
+services:
+
+  sunny-tech-workspace:
+    build:
+      context: .
+      platforms:
+        #- "linux/amd64"
+        - "linux/arm64"
+      dockerfile: Dockerfile
+      args:
+        - GO_VERSION=1.24.0
+        - TINYGO_VERSION=0.37.0
+        - EXTISM_VERSION=1.6.2      # Extism CLI
+        - NODE_MAJOR=22
+        - RUST_VERSION=stable
+        - USER_NAME=${USER}
+    #network_mode: "host"   
+    volumes:
+      - ../..:/workspaces:cached      
+    command: sleep infinity
+

@@ -1,0 +1,9 @@
+# docker compose up --build --no-log-prefix
+services:
+  chat-completion:
+    build: .
+    environment:
+      - MODEL_RUNNER_BASE_URL=${MODEL_RUNNER_BASE_URL}
+      - MODEL_RUNNER_LLM_CHAT=${MODEL_RUNNER_LLM_CHAT}
+ 
+

@@ -1,1 +1,1 @@
-# sunny-tech-2025-mcp
+# Sunny Tech 2025 MCP

@@ -1,0 +1,47 @@
+{
+	"name": "🦩SunnyTech😎",
+
+	"dockerComposeFile": "compose.yml",
+	"service": "sunny-tech-workspace",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {
+			"version": "latest"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"Tobermory.es6-string-html",
+				"hediet.vscode-drawio",
+				"PKief.material-icon-theme",
+				"PKief.material-product-icons",
+				"wayou.vscode-todo-highlight",
+				"docker.docker",
+				"ryu1kn.text-marker",
+				"anseki.vscode-color",
+				"JeronimoEkerdt.color-picker-universal",
+				"hashicorp.hcl",
+				"ms-python.python",
+				"bierner.markdown-mermaid",
+				"golang.go"
+			]
+		}
+	},
+    "remoteEnv": {
+		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}",
+		"DMR_BASE_URL": "http://model-runner.docker.internal"
+		//"OLLAMA_BASE_URL": "http://host.docker.internal:11434"
+    },
+	"forwardPorts": [3000, 4000, 8080, 9090, 7070, 6443],
+   	"mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached",
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/${localEnv:USER}/.ssh,type=bind,consistency=cached"
+    ],
+	"remoteUser": "${localEnv:USER}",
+	// Run commands after the container is created.
+	"postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} ; sudo chmod 666 /var/run/docker.sock;"
+
+}
