@@ -1,0 +1,1 @@
+bien expliquer qu'il faut tenir compte des LLM que l'on utilise pour le function calling

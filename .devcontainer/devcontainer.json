@@ -30,7 +30,7 @@
 		}
 	},
     "remoteEnv": {
-		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}",
+		//"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}",
 		"DMR_BASE_URL": "http://model-runner.docker.internal"
 		//"OLLAMA_BASE_URL": "http://host.docker.internal:11434"
     },

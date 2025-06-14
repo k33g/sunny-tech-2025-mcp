@@ -24,7 +24,7 @@
             "other": "off"
         }
     },
-    "markdown.preview.fontSize": 14,
+    "markdown.preview.fontSize": 16,
     "workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor"
     },
@@ -338,6 +338,30 @@
             "color": "#ffffff",
             "backgroundColor": "#53077F",
             "border": "1px solid #53077F",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "RESOURCES:",
+            "color": "#ffffff",
+            "backgroundColor": "#972AD6",
+            "border": "1px solid #972AD6",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "RESOURCE:",
+            "color": "#ffffff",
+            "backgroundColor": "#972AD6",
+            "border": "1px solid #972AD6",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "PROMPTS:",
+            "color": "#ffffff",
+            "backgroundColor": "#B91F5F",
+            "border": "1px solid #B91F5F",
             "borderRadius": "3px",
             "isWholeLine": false
         },

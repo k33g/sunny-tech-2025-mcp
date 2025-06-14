@@ -9,13 +9,16 @@ import (
 	"github.com/mark3labs/mcp-go/server"
 )
 
+/*
 type Config struct {
 	BaseURL        string
 	EmbeddingModel string
 	MaxResults     string
 }
 
+
 var config Config
+*/
 
 func main() {
 

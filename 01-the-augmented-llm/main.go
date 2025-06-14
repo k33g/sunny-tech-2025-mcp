@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-
+	// TODO: show the code of the agents
 	Lyralei, err := agents.GetLyraleiAgent("ai/qwen2.5:latest")
 	if err != nil {
 		log.Fatalln("😡:", err)
@@ -42,8 +42,7 @@ func main() {
 
 	Lyralei.Params.Messages = append(
 		Lyralei.Params.Messages,
-		// IMPORTANT: avoid to answering the same question twice
-		openai.AssistantMessage(answer),
+		openai.AssistantMessage(answer), // IMPORTANT: avoid to answering the same question twice
 		openai.UserMessage("Quelles sont tes motivations?"),
 	)
 

@@ -11,12 +11,12 @@ import (
 )
 
 type TinyAgent struct {
-	ctx    context.Context
-	client openai.Client
-	Params openai.ChatCompletionNewParams
-	Name   string
-	Avatar string
-	Color string // used for UI display
+	ctx          context.Context
+	client       openai.Client
+	Params       openai.ChatCompletionNewParams
+	Name         string
+	Avatar       string
+	Color        string // used for UI display
 	Instructions openai.ChatCompletionMessageParamUnion
 }
 
@@ -102,6 +102,8 @@ func (agent *TinyAgent) ChatCompletionStream(callBack func(self *TinyAgent, cont
 // It sends the parameters set in the Agent and returns the detected tool calls or an error.
 // It is a synchronous operation that waits for the completion to finish.
 func (agent *TinyAgent) ToolsCompletion() ([]openai.ChatCompletionMessageToolCall, error) {
+
+	//fmt.Println("🔴", agent.Params)
 
 	completion, err := agent.client.Chat.Completions.New(agent.ctx, agent.Params)
 	if err != nil {

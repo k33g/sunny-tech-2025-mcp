@@ -66,6 +66,7 @@ func GetZephyrAgent(model string) (*TinyAgent, error) {
 
 }
 
+// IMPORTANT: TOOLS:
 func getZephyrToolsCatalog() []openai.ChatCompletionToolParam {
 
 	chooseCharacterBySpecies := openai.ChatCompletionToolParam{
