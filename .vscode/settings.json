@@ -365,5 +365,21 @@
             "borderRadius": "3px",
             "isWholeLine": false
         },
+        {
+            "text": "CHUNKS:",
+            "color": "#ffffff",
+            "backgroundColor": "#3C10B3",
+            "border": "1px solid #3C10B3",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "CHUNK:",
+            "color": "#ffffff",
+            "backgroundColor": "#3C10B3",
+            "border": "1px solid #3C10B3",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
     ]
 }

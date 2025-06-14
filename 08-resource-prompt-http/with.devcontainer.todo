@@ -1,0 +1,5 @@
+use docker compose
+.devcontainer/compose.yml
+
+network_mode: "host"  
+# IMPORTANT: when you work with devcontainer.

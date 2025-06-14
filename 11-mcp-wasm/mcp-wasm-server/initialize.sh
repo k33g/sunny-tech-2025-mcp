@@ -8,7 +8,7 @@ This is by design - it ensures that both client and server agree
 on protocol version and capabilities before exchanging data.
 COMMENT
 
-MCP_SERVER=${MCP_SERVER:-"http://localhost:9090"}
+MCP_SERVER=${MCP_SERVER:-"http://localhost:7070"}
 
 
 #MCP_SERVER=http://host.docker.internal:9090/mcp

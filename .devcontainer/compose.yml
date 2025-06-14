@@ -14,7 +14,7 @@ services:
         - NODE_MAJOR=22
         - RUST_VERSION=stable
         - USER_NAME=${USER}
-    #network_mode: "host"   
+    network_mode: "host"  # IMPORTANT: when you work with devcontainer.
     volumes:
       - ../..:/workspaces:cached      
     command: sleep infinity

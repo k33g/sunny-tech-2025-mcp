@@ -18,3 +18,4 @@ COPY --from=builder /app/mcp-dd .
 ENTRYPOINT ["./mcp-dd"]
 
 # docker build --platform linux/arm64 -t mcp-dd:demo .
+# NOTE: Inspector: docker run --rm -i mcp-dd:demo 
