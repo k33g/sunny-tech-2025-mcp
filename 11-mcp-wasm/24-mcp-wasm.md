@@ -1,4 +1,7 @@
 # WASM + MCP
 
-- Système de plugins
+- Système de plugins -> évolutif
+- Polyglotte
 - Sécurité
+- ...
+

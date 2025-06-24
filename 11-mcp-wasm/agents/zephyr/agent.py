@@ -4,7 +4,8 @@ from datetime import date
 from google.adk.agents import Agent
 from google.adk.models.lite_llm import LiteLlm
 
-from google.adk.tools.mcp_tool.mcp_toolset import MCPToolset,StdioServerParameters, SseServerParams, StreamableHTTPServerParams
+from google.adk.tools.mcp_tool.mcp_session_manager import StreamableHTTPServerParams
+from google.adk.tools.mcp_tool.mcp_toolset import MCPToolset
 
 from google.genai import types
 
@@ -34,9 +35,9 @@ root_agent = Agent(
             connection_params=StreamableHTTPServerParams(
                 url="http://0.0.0.0:7070/mcp",
             ),
-            tool_filter=[
-                'orc_greetings', 'vulcan_greetings'
-            ]
+            #tool_filter=[
+            #    'orc_greetings', 'vulcan_greetings'
+            #]
         ),      
     ],
 

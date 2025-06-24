@@ -57,7 +57,7 @@ func main() {
 	}
 	chunks := []string{}
 	for _, content := range contents {
-		chunks = append(chunks, ChunkText(content, 512, 210)...)
+		chunks = append(chunks, ChunkText(content, 1024, 256)...)
 	}
 
 	//fmt.Println(chunks)

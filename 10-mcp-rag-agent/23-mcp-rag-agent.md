@@ -30,10 +30,17 @@ go run main.go
 
 ## Agent Zephyr (Google ADK Python) pour utiliser `question_about_something`
 
-
+Zephyr va utiliser le serveur MCP pour chercher des informations à propos des règles du jeu.
 
 > Démarrage
 ```bash
 cd agents
 adk web
 ```
+
+### Questions
+
+- trouve dans ta base la liste des monstres
+- trouve dans ta base qui est keegorg
+
+
