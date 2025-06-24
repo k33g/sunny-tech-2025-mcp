@@ -40,9 +40,19 @@ func ToolCallsToJSONString(tools []openai.ChatCompletionMessageToolCall) (string
 	return string(jsonString), nil
 }
 
-
+/*
 func ExtractArgsFromJSONString(jsonString string) (map[string]string) {
 	var args map[string]string
+	err := json.Unmarshal([]byte(jsonString), &args)
+	if err != nil {
+		return nil
+	}
+	return args
+}
+*/
+
+func ExtractArgsFromJSONString(jsonString string) (map[string]any) {
+	var args map[string]any
 	err := json.Unmarshal([]byte(jsonString), &args)
 	if err != nil {
 		return nil

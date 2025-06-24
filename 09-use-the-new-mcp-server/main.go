@@ -184,6 +184,8 @@ func main() {
 
 				args := helpers.ExtractArgsFromJSONString(toolCall.Function.Arguments)
 
+				ui.Println(ui.Green, "💡 tool arguments:", args)
+
 				switch toolCall.Function.Name {
 				// TOOL 1:
 				case "choisir_un_personnage_par_son_espece":
@@ -212,6 +214,18 @@ func main() {
 					characterName := toolResponse.Content[0].(mcp.TextContent).Text
 
 					selectedCharacter = characters[characterName]
+				// TOOL 3:
+				case "lancer_des_des":
+					// NOTE: Call the MCP tool with the arguments
+					request := mcp.CallToolRequest{}
+					request.Params.Name = toolCall.Function.Name
+					request.Params.Arguments = args
+
+					toolResponse, _ := mcpClient.CallTool(ctx, request)
+					// Display the result of the dice roll
+					ui.Println(ui.Green, "🎲 Dice roll result:", toolResponse.Content[0].(mcp.TextContent).Text)
+
+					question = toolResponse.Content[0].(mcp.TextContent).Text
 
 				default:
 					ui.Println(ui.Red, "❌ Error: unknown tool", toolCall.Function.Name)
@@ -224,26 +238,28 @@ func main() {
 
 		// STEP 3: chat with the selected character / chat completion
 		// Add the question to the messages
+		selectedCharacter.Params.Messages = append(selectedCharacter.Params.Messages,
+			openai.UserMessage(question),
+		)
 
-		if selectedCharacter.Name == "Aldric" {
-			selectedCharacter.Params.Messages = append(selectedCharacter.Params.Messages,
-				openai.UserMessage(promptText), // Use the prompt message content
-			)
+		/*
+			if selectedCharacter.Name == "Aldric" {
+				selectedCharacter.Params.Messages = append(selectedCharacter.Params.Messages,
+					openai.UserMessage(promptText), // Use the prompt message content
+				)
 
-		} else {
-			selectedCharacter.Params.Messages = append(selectedCharacter.Params.Messages,
-				openai.UserMessage(question),
-			)
+			} else {
+				selectedCharacter.Params.Messages = append(selectedCharacter.Params.Messages,
+					openai.UserMessage(question),
+				)
 
-		}
+			}
+		*/
 
-		// TODO:
-		// display who is speaking...
-		// add a color to the struct agent
+		// STEP 4: display who is speaking...
 		ui.Println(ui.Magenta, "[", selectedCharacter.Avatar, "]", selectedCharacter.Name, "is speaking...")
 
-		// Run the chat completion
-
+		// STEP 5: display the answer / run the chat completion
 		answer, _ := selectedCharacter.ChatCompletionStream(func(self *agents.TinyAgent, content string, err error) error {
 			ui.Print(selectedCharacter.Color, content)
 			return nil

@@ -53,7 +53,8 @@ func main() {
 		log.Fatalln("😡 character not found")
 	}
 
-	// BEGIN: MCP SECTION STEP 1: Initialize MCP server
+	// BEGIN: MCP SECTION 
+	// STEP 1: Initialize MCP server
 	cmd := exec.Command(
 		"docker",
 		"run",

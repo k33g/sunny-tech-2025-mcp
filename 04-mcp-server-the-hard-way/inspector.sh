@@ -2,6 +2,7 @@
 : <<'COMMENT'
 Inspector project:
 https://modelcontextprotocol.io/docs/tools/inspector
+NOTE: Inspector: docker run --rm -i mcp-dd:demo 
 COMMENT
 
 npx @modelcontextprotocol/inspector@0.13.0

@@ -13,8 +13,8 @@ import (
 )
 
 func main() {
-	//charaterLLM := "k33g/qwen2.5:0.5b-instruct-q2_k"
-	charaterLLM := "ai/qwen2.5:latest"
+	//characterModel := "k33g/qwen2.5:0.5b-instruct-q2_k"
+	characterModel := "ai/qwen2.5:latest"
 	//toolsLLM := "k33g/qwen2.5:0.5b-instruct-q8_0"
 	//toolsLLM := "ai/qwen2.5:3B-F16"
 	toolsLLM := "ai/qwen2.5:latest"
@@ -25,10 +25,10 @@ func main() {
 	Zephyr, err1 := agents.GetZephyrAgent(toolsLLM)
 	// IMPORTANT: the model must support the tools
 	// NOTE: ai/qwen2.5:3B-F16 is pretty good
-	Thorin, err2 := agents.GetThorinAgent(charaterLLM)
-	Lyralei, err3 := agents.GetLyraleiAgent(charaterLLM)
-	Aldric, err4 := agents.GetAldricAgent(charaterLLM)
-	Grash, err5 := agents.GetGrashAgent(charaterLLM)
+	Thorin, err2 := agents.GetThorinAgent(characterModel)
+	Lyralei, err3 := agents.GetLyraleiAgent(characterModel)
+	Aldric, err4 := agents.GetAldricAgent(characterModel)
+	Grash, err5 := agents.GetGrashAgent(characterModel)
 
 	if err1 != nil || err2 != nil || err3 != nil || err4 != nil || err5 != nil {
 		log.Fatalln("😡:", err1, err2, err3, err4, err5)

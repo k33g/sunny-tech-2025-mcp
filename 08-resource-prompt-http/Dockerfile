@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM golang:1.24.3-alpine AS builder
+FROM --platform=$BUILDPLATFORM golang:1.24.4-alpine AS builder
 ARG TARGETOS
 ARG TARGETARCH
 
@@ -11,7 +11,8 @@ go mod tidy
 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build
 EOF
 
-FROM debian:bookworm-slim
+#FROM debian:bookworm-slim
+FROM scratch
 WORKDIR /app
 COPY --from=builder /app/dungeon.md .
 COPY --from=builder /app/mcp-dd-http .

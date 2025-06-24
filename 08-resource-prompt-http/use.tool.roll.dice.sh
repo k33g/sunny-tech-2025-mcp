@@ -16,8 +16,8 @@ read -r -d '' DATA <<- EOM
   "params": {
     "name": "lancer_des_des",
     "arguments": {
-      "nb_dices": 3,
-      "sides": 12
+      "nb_dices": 5,
+      "nb_sides": 8
     }
   }
 }

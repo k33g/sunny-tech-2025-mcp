@@ -47,11 +47,11 @@ func main() {
 		mcp.WithDescription("Lancez des dés pour obtenir un résultat aléatoire."),
 		mcp.WithNumber("nb_dices",
 			mcp.Required(),
-			mcp.Description("Le nombre de dés à lancer. Par défaut, 1 dé est lancé."),
+			mcp.Description("Le nombre de dés à lancer"),
 		),
-		mcp.WithNumber("sides",
+		mcp.WithNumber("nb_sides",
 			mcp.Required(),
-			mcp.Description("Le nombre de faces du dé. Par défaut, un dé à 6 faces est lancé."),
+			mcp.Description("Le nombre de faces des dés"),
 		),
 	)
 
@@ -65,7 +65,7 @@ func main() {
 	resource := mcp.NewResource(
 		"dungeon://rooms",
 		"dungeon project",
-		mcp.WithResourceDescription("Therooms of the dungeon project"),
+		mcp.WithResourceDescription("Les Cinq Pièces du Donjon Oublié"),
 		mcp.WithMIMEType("text/markdown"),
 	)
 
@@ -93,7 +93,7 @@ func main() {
 
 	prompt := mcp.NewPrompt(
 		"roll_dices_prompt",
-		mcp.WithPromptDescription("A roll dices prompt example"),
+		mcp.WithPromptDescription("Un prompt pour lancer des dés."),
 		mcp.WithArgument("numFaces",
 			mcp.ArgumentDescription("nombre de faces du dé"),
 		),
@@ -116,7 +116,7 @@ func main() {
 
 		// Create the prompt content
 		return mcp.NewGetPromptResult(
-			"Roll Dices Prompt",
+			"Pompt pour lancer des dés",
 			[]mcp.PromptMessage{
 				mcp.NewPromptMessage(
 					mcp.RoleUser,
@@ -198,8 +198,11 @@ func detectTheRealTopicInUserMessageHandler(ctx context.Context, request mcp.Cal
 }
 
 func rollDicesHandler(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
+		
 	nbDices := request.GetInt("nb_dices", 1)
-	sides := request.GetInt("sides", 6)
+	sides := request.GetInt("nb_sides", 6)
+
+	log.Printf("🎲 Rolling %d dice(s) with %d sides each...\n", nbDices, sides)
 
 	roll := func(n, x int) int {
 		if n <= 0 || x <= 0 {
