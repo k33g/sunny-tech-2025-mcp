@@ -12,12 +12,15 @@ import (
 
 func main() {
 
-	//Zephyr, err := agents.GetZephyrAgent("ai/qwen2.5:3B-F16")
+	Zephyr, err := agents.GetZephyrAgent("ai/qwen2.5:3B-F16")
 	//Zephyr, err := agents.GetZephyrAgent("ai/qwen2.5:latest")
 	//Zephyr, err := agents.GetZephyrAgent("ignaciolopezluna020/llama-xlam:8B-Q4_K_M")
 	//Zephyr, err := agents.GetZephyrAgent("k33g/qwen2.5:0.5b-instruct-q8_0")
 
-	Zephyr, err := agents.GetZephyrAgent("ai/qwen3")
+	//Zephyr, err := agents.GetZephyrAgent("ai/qwen3")
+	//Zephyr, err := agents.GetZephyrAgent("philippecharriere494/llama-xlam-2:8b-fc-r-q6_k")
+	//Zephyr, err := agents.GetZephyrAgent("philippecharriere494/llama-xlam-2:8b-fc-r-q8_0")
+
 
 
 	if err != nil {
