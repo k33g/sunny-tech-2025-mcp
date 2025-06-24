@@ -69,6 +69,8 @@ func main() {
 					openai.UserMessage(`
 						je souhaite parler avec un nain
 
+						Je voudrais aborder le sujet de la justice
+
 						je veux discuter avec une elfe
 
 						j'ai une question sur la magie					

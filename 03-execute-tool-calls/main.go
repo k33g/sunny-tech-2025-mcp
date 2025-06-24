@@ -77,7 +77,7 @@ func main() {
 		toolsMaster.Params.Messages = []openai.ChatCompletionMessageParamUnion{
 			openai.UserMessage(question),
 		}
-		// Run the tools detection (completion)
+		// IMPORTANT: Run the tools detection (completion)
 		detectedToolCalls, _ := toolsMaster.ToolsCompletion()
 
 		// STEP 2: BEGIN: of tools execution

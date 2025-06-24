@@ -2,9 +2,9 @@ package tools
 
 import "strings"
 
-func ChooseCharacterBySpecies(args map[string]string) string {
+func ChooseCharacterBySpecies(args map[string]any) string {
 	if speciesName, ok := args["species_name"]; ok {
-		switch strings.ToLower(speciesName) {
+		switch strings.ToLower(speciesName.(string)) {
 		case "humain":
 			return "aldric"
 		case "orc":
@@ -23,9 +23,9 @@ func ChooseCharacterBySpecies(args map[string]string) string {
 
 }
 
-func ChooseCharacterFromTopic(args map[string]string) string {
+func ChooseCharacterFromTopic(args map[string]any) string {
 	if topicName, ok := args["topic_name"]; ok {
-		switch strings.ToLower(topicName) {
+		switch strings.ToLower(topicName.(string)) {
 		case "justice":
 			return "aldric"
 		case "guerre", "combat":

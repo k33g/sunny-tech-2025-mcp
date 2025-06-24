@@ -22,8 +22,7 @@ func main() {
 
 	Zephyr, err1 := agents.GetZephyrAgent("ai/qwen2.5:3B-F16")
 	// IMPORTANT: the model must support the tools
-	// NOTE: ai/qwen2.5:3B-F16 is pretty good
-	// NOTE: ai/qwen3:latest try to always answer the question
+
 	Thorin, err2 := agents.GetThorinAgent("ai/qwen2.5:latest")
 	Lyralei, err3 := agents.GetLyraleiAgent("ai/qwen2.5:latest")
 	Aldric, err4 := agents.GetAldricAgent("ai/qwen2.5:latest")
