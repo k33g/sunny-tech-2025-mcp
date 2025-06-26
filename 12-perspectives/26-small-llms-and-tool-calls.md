@@ -1,73 +1,15 @@
-# Et si on améliorait la détection des "tool calls" avec des plus petits modèles ?
+# Petits modèles (donc locaux) et MCP
 
-## C'était mieux avant
+## Ça fonctionne
 
-```mermaid
-flowchart TD
-    A[📦 Catalogue d'outils] --> B[🔄 Marshal vers JSON]
-    B --> C["📝 Création toolsContent<br/>[AVAILABLE_TOOLS]....[/AVAILABLE_TOOLS]"]
-    
-    C --> D[📋 Instructions système]
-    D --> E["💬 Message système complet:<br/>Introduction + toolsContent + Instructions"]
-    
-    E --> F[🤖 1ère Complétion API]
-    F --> G[📄 Résultat: JSON brut des tool calls]
-    
-    G --> H["🔧 Construction nouveaux messages:<br/>System: 'Return all function calls...'<br/>User: résultat précédent"]
-    
-    H --> I[⚙️ Configuration format JSON forcé]
-    I --> J[🤖 2ème Complétion API]
-    J --> K[📊 Résultat: JSON structuré avec 'function_calls']
-    
-    K --> L[🔍 Parse JSON vers struct FunctionCalls]
-    L --> M[🔄 Boucle: Pour chaque command]
-    
-    M --> N[🔧 Marshal arguments vers JSON]
-    N --> O[🆔 Génération UUID unique]
-    O --> P[🏗️ Création ChatCompletionMessageToolCall]
-    
-    P --> Q{Fin de boucle?}
-    Q -->|Non| M
-    Q -->|Oui| R[✅ Retour: Liste des Tool Calls]
-    
-    subgraph "Étape 1: Préparation du catalogue"
-        B
-        C
-    end
-    
-    subgraph "Étape 2: Instructions et 1ère completion"
-        D
-        E
-        F
-        G
-    end
-    
-    subgraph "Étape 3: 2ème completion avec format JSON"
-        H
-        I
-        J
-        K
-    end
-    
-    subgraph "Étape 4: Transformation en Tool Calls"
-        L
-        M
-        N
-        O
-        P
-    end
-    
+Les petits modèles sont utiles pour orienter, lire dans la doc, exécuter des tools 
 
-    
-    style A fill:#e3f2fd
-    style R fill:#c8e6c9
-    style F fill:#fff3e0
-    style J fill:#fff3e0
-    style B fill:#f3e5f5
-    style L fill:#f3e5f5
-```
+## Mais 😢 pas de chaînage pour les "Tool Calls" - ou il faut boucler ...
 
+- Et si on améliorait la détection des "tool calls" avec des plus petits modèles ?
+- Utilisation de l'ancienne méthode
 
+## Une solution
 
 1. Exporter le catalogue d'outils dans une string JSON: 
     ```go
@@ -128,4 +70,6 @@ flowchart TD
     }
     ```
 
-## Et ça fonctionne 🎉
+## Et ça fonctionne 🎉 --> DEMO 🚀
+
+

@@ -85,7 +85,9 @@ func main() {
 	}
 	initRequest.Params.Capabilities = mcp.ClientCapabilities{}
 
-	serverInfo, err := mcpClient.Initialize(ctx, initRequest)
+	//serverInfo, err := mcpClient.Initialize(ctx, initRequest)
+
+	_, err = mcpClient.Initialize(ctx, initRequest)
 	if err != nil {
 		log.Fatalf("😡 Failed to initialize: %v", err)
 	}
@@ -125,35 +127,36 @@ func main() {
 	// Quelles sont les pièces du donjon ?
 
 	// PROMPTS:
-
-	promptReq := mcp.GetPromptRequest{}
-	promptReq.Params.Name = "roll_dices_prompt"
-	promptReq.Params.Arguments = map[string]string{
-		"numFaces": "6",
-		"numDices": "3",
-	}
-	promptRes, err := mcpClient.GetPrompt(ctx, promptReq)
-	if err != nil {
-		log.Fatalf("😡 Failed to get prompt: %v", err)
-	}
-	promptMessages := promptRes.Messages[0]
-	promptText := promptMessages.Content.(mcp.TextContent).Text
-
-	fmt.Println("📝 Prompt response:", promptText)
-
-	if serverInfo.Capabilities.Prompts != nil {
-		fmt.Println("Fetching available prompts...")
-		promptsRequest := mcp.ListPromptsRequest{}
-		promptsResult, err := mcpClient.ListPrompts(ctx, promptsRequest)
+	/*
+		promptReq := mcp.GetPromptRequest{}
+		promptReq.Params.Name = "roll_dices_prompt"
+		promptReq.Params.Arguments = map[string]string{
+			"numFaces": "6",
+			"numDices": "3",
+		}
+		promptRes, err := mcpClient.GetPrompt(ctx, promptReq)
 		if err != nil {
-			log.Printf("Failed to list prompts: %v", err)
-		} else {
-			fmt.Printf("Server has %d prompts available\n", len(promptsResult.Prompts))
-			for i, prompt := range promptsResult.Prompts {
-				fmt.Printf("  %d. %s - %s\n", i+1, prompt.Name, prompt.Description)
+			log.Fatalf("😡 Failed to get prompt: %v", err)
+		}
+		promptMessages := promptRes.Messages[0]
+		promptText := promptMessages.Content.(mcp.TextContent).Text
+
+		fmt.Println("📝 Prompt response:", promptText)
+
+		if serverInfo.Capabilities.Prompts != nil {
+			fmt.Println("Fetching available prompts...")
+			promptsRequest := mcp.ListPromptsRequest{}
+			promptsResult, err := mcpClient.ListPrompts(ctx, promptsRequest)
+			if err != nil {
+				log.Printf("Failed to list prompts: %v", err)
+			} else {
+				fmt.Printf("Server has %d prompts available\n", len(promptsResult.Prompts))
+				for i, prompt := range promptsResult.Prompts {
+					fmt.Printf("  %d. %s - %s\n", i+1, prompt.Name, prompt.Description)
+				}
 			}
 		}
-	}
+	*/
 
 	for {
 		question, _ := ui.Input(

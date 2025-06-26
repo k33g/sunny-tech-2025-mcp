@@ -1,5 +1,5 @@
 # Avec le Model Context Protocol, l'IA peut prendre le contrôle de nos machines 🙀
-
+## 🚧 v0.0.0
 ### ⦿ Merci 🙏 Sunny Tech 🥰
 ### ⦿ Il est pourri mon titre
 ### ⦿ D&D 🏰🐉 PNJs
